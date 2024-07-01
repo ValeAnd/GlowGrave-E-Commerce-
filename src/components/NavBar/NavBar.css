@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    position: fixed;
+    z-index: 99999;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav__list .nav__item {
+    list-style: none;
+    padding: 0 2rem;
+    color: black;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.nav__item a{
+    text-decoration: none;
+    color:black;
+    transition: color border-bottom all 0.3s ;
+}
+
+.nav__item a:hover{
+    color: #232323;
+    border-bottom: solid 2px #232323;
+}
+.nav__item--left a{
+    margin-right: 6.875rem;
+    font-size: 25px;
+    font-weight: 700;
+    color: #FD904C;
+    text-transform: capitalize;
+}
+
+.nav__item--left a:hover{
+    border-bottom: none;
+    color: hsl(219, 9%, 45%);
+}
+
+.nav__item .nav__products{
+    position: absolute;
+    display: none;
+    background-color: white;
+    padding: 1.2rem ;
+}
+
+.nav__products .item__products{
+    margin-top: .4rem;
+    cursor: pointer;
+    list-style: none; 
+    transition: color 0.2s ease;
+}
+
+.nav__products .item__products:hover{
+    color: #E8D838;
+}
+
+.nav__item .nav__products--active{
+    display: block;
+    margin-left: -1.25rem;
+}
