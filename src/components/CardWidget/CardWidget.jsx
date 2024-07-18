@@ -1,9 +1,10 @@
-
+import { LuShoppingCart } from "react-icons/lu";
+import './CardWidget.css';
 
 function CardWidget({ cartCount }) {
     return (
       <a href="#">
-        <img src='/src/assets/icon-cart.svg' alt="" />
+        <LuShoppingCart size={22} />
         {cartCount}
       </a>
     );

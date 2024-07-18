@@ -1,0 +1,34 @@
+.container__productos{
+    padding-top: 9.375rem; 
+}
+
+.container__title{
+    height: 9.7rem;
+    margin-bottom: 6.25rem;
+    background-color: #88A27B;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title__category{
+    text-transform: capitalize;
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+.productos{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 4rem;
+    align-items: end;
+}
+
+@media (max-width : 1440px) {
+    .productos{
+        grid-template-columns: repeat(3,1fr); 
+    }
+}

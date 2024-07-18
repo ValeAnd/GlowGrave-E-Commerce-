@@ -1,0 +1,73 @@
+.container__detail{
+    margin: 0 auto;
+    width: 70%;
+    padding-top: 9.375rem;
+}
+
+.detail__product{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 60px;
+}
+
+.detail__text{
+    line-height: 2.5rem;
+}
+
+.text__marca{
+    font-weight: 600;
+    color: #4D4D4D;
+}
+
+.detail__texts h3{
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 1.25rem 0;
+}
+
+.detail__texts h4{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+.detail__count{
+    display: flex;
+    gap:10px
+}
+
+.detail__count button{
+    padding: 10px;
+    border: none;
+    background-color: #88A27B;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+}
+
+.detail__count p{
+    font-weight: 600;
+}
+
+.button__agregar{
+    padding: 15px 60px;
+    border-radius: 10px;
+    border: none;
+    background-color: #88A27B;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Poppins:wght@400;500;600;700&display=swap');
 
+
 *{
     margin: 0;
     padding: 0;
@@ -25,13 +26,16 @@ header{
     gap: 2rem;
 }
 
-.nav__list .nav__item {
+.nav__list .nav__item, .nav__list .nav__item--icon {
     list-style: none;
-    padding: 0 2rem;
     color: black;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
     cursor: pointer;
+}
+
+.nav__list .nav__item{
+    padding: 0 2rem;
 }
 
 .nav__item a{
@@ -40,21 +44,18 @@ header{
     transition: color border-bottom all 0.3s ;
 }
 
-.nav__item a:hover{
-    color: #232323;
-    border-bottom: solid 2px #232323;
+.nav__item a:hover, .nav__item--icon{
+    color: #666666;
 }
-.nav__item--left a{
-    margin-right: 6.875rem;
-    font-size: 25px;
+.nav__item--center a{
+    font-size: 40px;
     font-weight: 700;
-    color: #FD904C;
-    text-transform: capitalize;
+    color: #88A27B;
+    letter-spacing: 3px;
 }
 
-.nav__item--left a:hover{
-    border-bottom: none;
-    color: hsl(219, 9%, 45%);
+.nav__item--center a:hover{
+    color: #88A27B;
 }
 
 .nav__item .nav__products{
@@ -65,17 +66,25 @@ header{
 }
 
 .nav__products .item__products{
-    margin-top: .4rem;
+    margin-top: .8rem;
     cursor: pointer;
     list-style: none; 
     transition: color 0.2s ease;
 }
 
-.nav__products .item__products:hover{
-    color: #E8D838;
-}
-
 .nav__item .nav__products--active{
     display: block;
     margin-left: -1.25rem;
+}
+
+.nav_item--icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav__products .item__products{
+    font-size: 17px;
 }

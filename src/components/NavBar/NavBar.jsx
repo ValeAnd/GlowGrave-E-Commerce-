@@ -1,8 +1,11 @@
-import { useEffect } from 'react';  // Importar React y useEffect
+import { useEffect } from 'react';  
 import CardWidget from '../CardWidget/CardWidget';
 import './NavBar.css';
+import { FaRegHeart } from "react-icons/fa";
+import { FaRegUser } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
-function NavBar({ cartCount, title }) {
+function NavBar({ cartCount }) {
     useEffect(() => {
         const activarSubmenu = document.querySelector(".nav__list--products");
         const productosItem = document.querySelector(".nav__products");
@@ -22,18 +25,23 @@ function NavBar({ cartCount, title }) {
         <header>
             <nav className="nav">
                 <ul className="nav__list">
-                    <li className="nav__item nav__item--left"><a href="index.html">{title}</a></li>
-                    <li className="nav__item"><a href="index.html">Inicio</a></li>
+                    <li className="nav__item"><Link to="/">Inicio</Link></li>
                     <li className="nav__item nav__list--products">Productos
                         <ul className="nav__products">
-                            <li className="item__products products__category"><a href="#" className="nav-link categoria-link">Laptops</a></li>
-                            <li className="item__products products__category"><a href="#" className="nav-link categoria-link">Tablet</a></li>
-                            <li className="item__products products__category"><a href="#" className="nav-link categoria-link">Celulares</a></li>
-                            <li className="item__products products__category"><a href="#" className="nav-link categoria-link">Audífonos</a></li>
+                            <li className="item__products products__category"><Link to="/productos/limpiador" className="nav-link categoria-link">Limpiador Facial</Link></li>
+                            <li className="item__products products__category"><Link to="/productos/hidratacion" className="nav-link categoria-link">Hidratación</Link></li>
+                            <li className="item__products products__category"><Link to="/productos/exfoliante" className="nav-link categoria-link">Exfoliante</Link></li>
+                            <li className="item__products products__category"><Link to="/productos/bloqueador" className="nav-link categoria-link">Bloqueador Solar</Link></li>
                         </ul>
                     </li>
-                    <li className="nav__item"><a href="#">Contáctanos</a></li>
-                    <li className="nav__item nav__item--right"><CardWidget cartCount={cartCount} /></li>
+                    <li className="nav__item nav__item--center"><Link to="/">GlowGrove</Link></li>
+                    <li className="nav__item"><Link to="/nosotros">Sobre Nosotros</Link></li>
+                    <li className="nav__item"><Link to="/blogs">Blogs</Link></li>
+                    <div className="nav_item--icons">
+                        <li className="nav__item--icon nav__item--right"><CardWidget cartCount={cartCount} /></li>
+                        <li className="nav__item--icon"><FaRegHeart size= {20}/></li>
+                        <li className="nav__item--icon"><FaRegUser size= {20}/></li>
+                    </div>
                 </ul>
             </nav>
         </header>

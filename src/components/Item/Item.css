@@ -1,0 +1,42 @@
+
+.container__product{
+    text-align: center;
+}
+
+.product__heart{
+    text-align: right;
+}
+
+.container__product  img{
+    width: auto;
+    height: 300px;
+}
+
+.container__product h3{
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: .9375rem;
+}
+
+.container__product h4{
+    font-weight: 500;
+    color: #4D4D4D;
+}
+
+.container__product button{
+    margin-top: 1.2rem;
+    padding: .9375rem 6rem;
+    border: none;
+    border-radius: .625rem;
+    background-color: #88A27B;
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color ease 0.2s ;
+}
+
+.container__product button:hover{
+    background-color: #718a65;
+}
+
