@@ -40,3 +40,24 @@
     background-color: #718a65;
 }
 
+.random__container{
+    margin-top: 5rem;
+}
+
+.random__container h2{
+    margin-bottom: 3rem;
+}
+
+.random__products{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 4rem;
+    align-items: end;
+}
+
+@media (max-width : 1440px) {
+    .random__products{
+        grid-template-columns: repeat(3,1fr); 
+    }
+}

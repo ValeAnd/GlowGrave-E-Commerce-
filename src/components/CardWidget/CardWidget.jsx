@@ -1,12 +1,18 @@
 import { LuShoppingCart } from "react-icons/lu";
 import './CardWidget.css';
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
-function CardWidget({ cartCount }) {
+function CardWidget() {
+
+  const { cantidadCarrito } = useContext(CartContext)
+
     return (
-      <a href="#">
+      <Link to="/carrito">
         <LuShoppingCart size={22} />
-        {cartCount}
-      </a>
+        <span>{cantidadCarrito()}</span>
+      </Link>
     );
   }
   

@@ -5,24 +5,28 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Nosotros from './components/Nosotros/Nosotros'
 import Inicio from './components/Inicio/Inicio'
+import { CartContext, CartProvider } from './context/CartContext'
+import Carrito from './components/Carrito/Carrito'
 
 
 function App() {
 
-  const [cartCount] = useState(5)
 
   return (
     <>
+    <CartProvider>
       <BrowserRouter>
-          <NavBar cartCount={cartCount}/>
+          <NavBar />
           <Routes>
             <Route path='/' element={<Inicio/>}></Route>
             <Route path='/productos' element={<ItemListContainer />}></Route>
             <Route path='/productos/:categoria' element={<ItemListContainer />}></Route>
             <Route path='/item/:id' element={<ItemDetailContainer/>}></Route>
             <Route path='/nosotros' element={<Nosotros/>}></Route>
+            <Route path='/carrito' element={<Carrito/>}></Route>
           </Routes>
       </BrowserRouter>
+    </CartProvider>
     </>
   )
 }

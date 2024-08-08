@@ -1,3 +1,4 @@
+
 const productos = [
     {
       id: 1,
@@ -201,4 +202,18 @@ export const pedirItemPorId = (id) => {
           })
         }
     })
+}
+
+export const obtenerProductosRandom = (cantidad) => {
+    let productosAlAzar = [];
+    const productosCopia = [...productos];
+
+    for(let i=0 ; i<cantidad; i++){
+      if(productosCopia.length === 0) 
+        break;
+      const indiceAleatorio = Math.floor(Math.random() * productosCopia.length);
+      productosAlAzar.push(productosCopia[indiceAleatorio]);
+      productosCopia.splice(indiceAleatorio, 1);
+    }
+    return productosAlAzar;
 }

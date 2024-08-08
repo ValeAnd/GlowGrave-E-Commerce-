@@ -5,7 +5,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { FaRegUser } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
-function NavBar({ cartCount }) {
+function NavBar() {
     useEffect(() => {
         const activarSubmenu = document.querySelector(".nav__list--products");
         const productosItem = document.querySelector(".nav__products");
@@ -38,7 +38,7 @@ function NavBar({ cartCount }) {
                     <li className="nav__item"><Link to="/nosotros">Sobre Nosotros</Link></li>
                     <li className="nav__item"><Link to="/blogs">Blogs</Link></li>
                     <div className="nav_item--icons">
-                        <li className="nav__item--icon nav__item--right"><CardWidget cartCount={cartCount} /></li>
+                        <li className="nav__item--icon nav__item--right"><CardWidget /></li>
                         <li className="nav__item--icon"><FaRegHeart size= {20}/></li>
                         <li className="nav__item--icon"><FaRegUser size= {20}/></li>
                     </div>
