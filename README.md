@@ -1,4 +1,4 @@
-#  Proyecto GlowGrave E-Commerce 
+# Proyecto GlowGrave E-Commerce ⭐
 
 ## Descripcion
 
@@ -28,6 +28,6 @@ A continuación mostraremos una lista de todas las funcionalidades que tiene nue
 
 ## Paquetes utilizados en el proyecto
 - **react-hook-form** : Lo utilizamos para la gestion de formularios
-- **--save toastify-js** : Usamos esta libreria para poder mostrar notificaciones emergentes.
+- **toastify-js** : Usamos esta libreria para poder mostrar notificaciones emergentes.
 - **react-firebase** : Este paquete proporciona una integración fácil entre React y Firebase
 - **react-router-dom**: Utilizamos para renderizar nuestros componentes React en el DOM del navegador
