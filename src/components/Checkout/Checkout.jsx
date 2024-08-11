@@ -44,8 +44,7 @@ const Checkout = () => {
       </div>
     )
   }
-
-
+  
   return (
     <div className="order">
       <h1>Orden de compra</h1>
