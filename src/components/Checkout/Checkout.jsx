@@ -33,9 +33,14 @@ const Checkout = () => {
 
   if(pedido){
     return (
-      <div className= "order">
-        <div>Muchas gracias por tu compre</div>
-        <p>tu numero de pedido es {pedido}</p>
+      <div className= "confirm">
+        <div className="confirm__img">
+          <img src="./src/assets/orden.jpg" alt="" />
+        </div>
+        <div className="confirm__texts">
+          <p className="confirm__text">Muchas gracias por tu compra :)</p>
+          <p className="confirm__pedido">Su numero de pedido es : {pedido}</p>
+        </div>
       </div>
     )
   }
