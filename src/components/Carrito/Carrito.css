@@ -1,3 +1,122 @@
 .container__cart{
-    padding-top: 110px;
+    padding-top: 7.7rem;
+}
+
+.container__cart h1{
+    color: white;
+    text-transform: uppercase;
+}
+
+.container__title{
+    margin-bottom: 0; 
+}
+
+.cart__sections{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 5rem;
+}
+
+.cart__subtitles{
+    margin: 3.75rem 0;
+    margin-left: 23.75rem;
+}
+
+.cart__subtitles .subtitles__list{
+    display: grid;
+    grid-template-columns: repeat(4,215px);
+    list-style: none;
+    font-weight:600;
+    color: #8C8C8C;
+}
+
+.cart__product {
+    display: grid;
+    grid-template-columns: 120px 200px repeat(3, 90px);
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.cart__product .cart__img{
+    width: 9.375rem;
+}
+
+.cart__product .cart__title{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.cart__product .cart__price{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cart__total{
+    margin-top: 3.125rem;
+    line-height: 2.5rem;
+}
+
+.cart__total h3{
+    margin-bottom: 3.125rem;
+}
+
+.summary__text{
+    display: flex;
+    flex-direction: row;
+    gap: 9.375rem;
+}
+
+.text__subtitle{
+    font-weight: 600;
+    color: #8C8C8C;
+}
+
+.text__mount{
+    font-weight: 500;
+}
+
+.cart__buttons{
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cart__buttons button{
+    width: 18rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 1.25rem;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cart__buttons .button__empty{
+    background-color: white;
+    border: solid 3px #88A27B;
+    transition: all 0.3s;
+}
+
+.cart__buttons .button__buy{
+    background-color: #88A27B;
+    color: white;
+    transition: all 0.3s;
+}
+
+.button__empty:hover{
+    background-color: #88A27B;
+    color: white;
+}
+
+.button__buy:hover{
+    background-color: #4e6444;
+}
+
+.cart__empty{
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-left: 6.25rem;
 }

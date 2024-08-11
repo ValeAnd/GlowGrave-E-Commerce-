@@ -11,6 +11,11 @@
     gap: 60px;
 }
 
+
+.detail__img{
+    width: 500px;
+}
+
 .detail__text{
     line-height: 2.5rem;
 }

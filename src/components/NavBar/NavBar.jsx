@@ -28,6 +28,7 @@ function NavBar() {
                     <li className="nav__item"><Link to="/">Inicio</Link></li>
                     <li className="nav__item nav__list--products">Productos
                         <ul className="nav__products">
+                        <li className="item__products products__category"><Link to="/productos/todos" className="nav-link categoria-link">Todos los productos</Link></li>
                             <li className="item__products products__category"><Link to="/productos/limpiador" className="nav-link categoria-link">Limpiador Facial</Link></li>
                             <li className="item__products products__category"><Link to="/productos/hidratacion" className="nav-link categoria-link">Hidratación</Link></li>
                             <li className="item__products products__category"><Link to="/productos/exfoliante" className="nav-link categoria-link">Exfoliante</Link></li>

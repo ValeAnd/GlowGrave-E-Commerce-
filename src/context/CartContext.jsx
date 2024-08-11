@@ -20,10 +20,9 @@ export const CartProvider = ({children}) => {
         } else {
         nuevoCarrito.push(itemAgregado);
         }
-
+       
         setCarrito(nuevoCarrito )
     };
-
 
     const cantidadCarrito = () => {
         return carrito.reduce((acc, prod) => acc + prod.cantidad , 0);

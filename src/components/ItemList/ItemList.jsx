@@ -2,7 +2,6 @@ import Item from "../Item/Item"
 import './ItemList.css'
 
 const ItemList = ({productos , titulo}) => {
-    console.log(productos);
   return (
     <div className="container__productos">
       <div className="container__title">

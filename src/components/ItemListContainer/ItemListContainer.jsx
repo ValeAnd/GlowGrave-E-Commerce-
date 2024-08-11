@@ -1,8 +1,8 @@
-import { pedirDatos } from "../../asyncMock"
 import { useEffect, useState } from 'react'
-
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../firebase/config";
 
   function ItemListContainer() {
 
@@ -11,15 +11,22 @@ import { useParams } from "react-router-dom";
     const [titulo, setTitulo]= useState("Productos");
 
     useEffect(() => {
-      pedirDatos()
+
+      const productosRef = collection (db, "productos");
+ 
+      const filtrado = categoria && categoria !== "todos"? query(productosRef, where("categoria", "==", categoria)) : productosRef;
+      //El getDocs me devuelve un QuerySnapshot que es una colleccion de documentos
+
+      getDocs(filtrado)
         .then((res) => {
-          if(categoria){
-            setProductos(res.filter((productos) => productos.categoria === categoria));
-            setTitulo(categoria);
-          }else{
-            setProductos(res)
-          }
+          setProductos(
+            res.docs.map((doc) => {
+              return { ...doc.data(), id: doc.id}
+            })
+          )
+          setTitulo(categoria && categoria !== "todos" ? categoria : "Todos los productos");
         })
+
     }, [categoria]);
     
     return (
