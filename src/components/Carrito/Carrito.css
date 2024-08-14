@@ -122,9 +122,6 @@
 }
 
 @media (max-width : 1440px) {
-    .cart__sections{
-        grid-template-columns: 2fr 1fr;
-    }
     .cart__subtitles .subtitles__list{
         grid-template-columns: repeat(4,150px);  
     }  
