@@ -46,11 +46,12 @@
     transform: scale(1.1);
 }
 
-.categorias h2{
-    margin: 4rem 0;
+.categorias h2, .populares h2{
+    margin: 5rem 0;
+    text-align: center;
     font-weight: 600;
-    font-size: 2.5rem;
-    letter-spacing: 3px;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
 }
 
 .categoria h3{
@@ -75,12 +76,11 @@
 
 .banners {
     width: 70%;
-    margin: 3.125rem auto;
+    margin: 4rem auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 4rem;
-    
+    gap: 4rem;   
 }
 
 .banner__container{
@@ -128,4 +128,49 @@
     color: white;
     background-color: var(--hover-bg-color);
     cursor: pointer;
+}
+
+.swiper {
+    width: 75%;
+    height: 100%;
+}
+  
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.swiper-slide img {
+    display: block;
+    width: auto;
+    height: 15.625rem;
+    object-fit: cover;
+}
+
+.swiper-slide .container__img{
+    display: flex;
+    justify-content: center;
+}
+
+.mySwiper .swiper-button-prev, 
+.mySwiper .swiper-button-next {
+    color: #B9B9B9;
+}
+
+@media (min-width : 1024px) {
+    .banners {
+        justify-content: center; 
+    }
+
+    .banner__content{
+        line-height: 2.5rem;
+    }
+
+    .swiper {
+        width: 85%;
+    }
 }

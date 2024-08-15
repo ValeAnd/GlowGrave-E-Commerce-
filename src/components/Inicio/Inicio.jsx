@@ -2,6 +2,7 @@
 import Categoria from './Categoria'
 import './Inicio.css'
 import OfertasBanner from './OfertasBanner'
+import Productos from './Productos'
 
 const Inicio = () => {
 
@@ -50,6 +51,15 @@ const Inicio = () => {
                 bgColorBanner="#CEC5CB"
                 bgColorButton="#8C7786"
             />
+        </div>
+        <div>
+            {/* <ProductosPopulares /> */}
+        </div>
+        <div className="populares">
+            <h2>Productos Populares</h2>
+            <div>
+                <Productos/>
+            </div>
         </div>
     </>
   )
